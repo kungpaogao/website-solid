@@ -1,8 +1,16 @@
-import type { Component } from 'solid-js';
+import { useRoutes } from "solid-app-router";
+import { Component, lazy } from "solid-js";
+import Navigation from "./components/Navigation";
+import { routes } from "./routes";
 
 const App: Component = () => {
+  const Routes = useRoutes(routes);
+
   return (
-    <p class="text-4xl text-green-700 text-center py-20">Hello tailwind!</p>
+    <>
+      <Navigation />
+      <Routes />
+    </>
   );
 };
 
