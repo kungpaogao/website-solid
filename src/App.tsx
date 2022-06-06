@@ -1,6 +1,6 @@
 import { useRoutes } from "solid-app-router";
 import { Component } from "solid-js";
-import Navigation from "./components/Navigation";
+import Layout from "./components/Layout";
 import { routes } from "./routes";
 
 const App: Component = () => {
@@ -8,8 +8,9 @@ const App: Component = () => {
 
   return (
     <>
-      <Navigation />
-      <Routes />
+      <Layout>
+        <Routes />
+      </Layout>
     </>
   );
 };
