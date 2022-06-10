@@ -34,13 +34,11 @@ type NavigationItemProps = {
   className?: string;
 };
 
-const NavigationItem: Component<NavigationItemProps> = ({
-  href,
-  children,
-  className,
-}) => (
-  <li class={`text-gray-500 transition-colors hover:text-black ${className}`}>
-    <Link href={href}>{children}</Link>
+const NavigationItem: Component<NavigationItemProps> = (props) => (
+  <li
+    class={`text-gray-500 transition-colors hover:text-black ${props.className}`}
+  >
+    <Link href={props.href}>{props.children}</Link>
   </li>
 );
 
